@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefWidth="370.0" style="-fx-border-color: #CCCCCC; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.boundary.boundaryControllers.GenericPanelController">
+   <children>
+      <TableView fx:id="tbView" layoutX="46.0" layoutY="54.0" prefWidth="248.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="30.0" />
+      <Label fx:id="lbTitle" layoutX="17.0" layoutY="7.0" prefHeight="20.0" prefWidth="190.0" text="PANEL_TITLE" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="6.0">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </Label>
+      <ToolBar orientation="VERTICAL" prefWidth="100.0" style="-fx-background-color: #DDDDDD;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <items>
+            <StackPane>
+               <children>
+                  <Button fx:id="bAggiungi" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" StackPane.alignment="CENTER_LEFT">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="Aggiungi" StackPane.alignment="CENTER_RIGHT" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Button fx:id="bRimuovi" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" StackPane.alignment="CENTER_LEFT">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/remove.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="Rimuovi" StackPane.alignment="CENTER_RIGHT" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="39.0">
+               <children>
+                  <Button fx:id="bModifica" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" StackPane.alignment="CENTER_LEFT">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="Modifica" StackPane.alignment="CENTER_RIGHT" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="10.0" layoutY="68.0">
+               <children>
+                  <Button fx:id="bVisualizza" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" StackPane.alignment="CENTER_LEFT">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/view.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="61.0" text="Visualizza" StackPane.alignment="CENTER_RIGHT" />
+               </children>
+            </StackPane>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
