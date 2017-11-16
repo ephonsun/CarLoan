@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.boundary.boundaryControllers.entityWindows.ContractWindowController">
+   <children>
+      <Label fx:id="lb_EntityName" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="8.0" prefHeight="39.0" prefWidth="158.0" text="Contratto" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="30.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="15.0" layoutY="55.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="55.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="55.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" prefWidth="185.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="394.0" minHeight="10.0" prefHeight="394.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="130.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="113.0" text="Data Inizio" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="dtDataInizio" prefWidth="175.0">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="44.0" layoutY="10.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="113.0" text="Data Fine: " wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="dtDataFine" prefWidth="175.0">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="107.0" text="Partenza:" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="cbSedePartenza" prefWidth="170.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="10.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="44.0" prefWidth="100.0" text="Arrivo: " wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="cbSedeArrivo" prefWidth="175.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="74.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="107.0" text="Tariffa: " wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="cbTariffa" prefWidth="170.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="44.0" prefWidth="100.0" text="Km:" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txChilometri" prefHeight="25.0" prefWidth="175.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="99.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label contentDisplay="CENTER" prefHeight="49.0" prefWidth="107.0" text="Categoria:" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="cbCategoria" prefWidth="170.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="49.0" prefWidth="102.0" text="Stato: " wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="cbStato" prefWidth="175.0" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="116.0" spacing="6.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="55.0" text="Prezzo:" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbPrezzo" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="54.0" text="XXXX.XX €" wrapText="true">
+                                       <font>
+                                          <Font name="Yu Gothic UI Semilight" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="bChiudiContratto" mnemonicParsing="false" text="Chiudi">
+                                 <HBox.margin>
+                                    <Insets left="75.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="bAvviaContratto" layoutX="249.0" layoutY="12.0" mnemonicParsing="false" text="Avvia">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="bAnnullaContratto" layoutX="299.0" layoutY="12.0" mnemonicParsing="false" text="Annulla">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="246.0" prefWidth="370.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Cliente" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TableView fx:id="tbCliente" prefHeight="358.0" prefWidth="317.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" />
+                                 </VBox.margin>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets top="15.0" />
+                     </GridPane.margin>
+                  </VBox>
+               </children>
+               <GridPane.margin>
+                  <Insets left="15.0" right="15.0" />
+               </GridPane.margin>
+            </GridPane>
+            <VBox alignment="TOP_CENTER" prefHeight="246.0" prefWidth="370.0" GridPane.columnIndex="1">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="246.0" prefWidth="370.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Autoveicolo" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView fx:id="tbAutoveicolo" prefHeight="358.0" prefWidth="317.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="15.0" right="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="246.0" prefWidth="370.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Optional" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView fx:id="tbOptional" prefHeight="159.0" prefWidth="385.0">
+                           <VBox.margin>
+                              <Insets left="15.0" right="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="450.0">
+         <children>
+            <Button fx:id="bConferma" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefWidth="75.0" text="Conferma">
+               <FlowPane.margin>
+                  <Insets right="5.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="bAnnulla" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Annulla">
+               <FlowPane.margin>
+                  <Insets left="5.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
